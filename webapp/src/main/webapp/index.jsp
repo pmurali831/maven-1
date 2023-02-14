@@ -1,5 +1,8 @@
 <html>
 <body>
+background-color:khaki
+ <style>
+ </style>
 <h1>Welcome To IntelliQ IT</h1>
 </body>
 <body style="color:red;">
