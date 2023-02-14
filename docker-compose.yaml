@@ -4,3 +4,12 @@ services:
   image: pmurali831/myapplication:2.0
   ports:
    - 5050:8080
+agent:
+  image: jenkins/ssh-agent:jdk11
+  privileged: true
+  user: root
+  container_name: agent
+  expose:
+    - 22
+  environment:
+    - JENKINS_AGENT_SSH_PUBKEY=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCx+BfNUL2eYetuSEXJyoWCb3NRxQbkOZcdBD4p0W9SDMlPUEMLSr5YRKytyMjDN/y1KMexOpu6kaDCvK9IPsmMo3Na+alyTXGDacqkUqWkSBb9BWiwqylGYx3hMcIc9D/DNxLyIJP4yl0ZpEMvfjn5/tPPrJMHD1txk5yUjkymxJd66GKsnGq38RRMdhqKg5qz89lM9AWjgk8Q0GKMd0I8K37n1wphcDExovYe49lRykqcV4l65CTXPgqN6KtcRiA3e0CMm0/OCxtLBpIfdnBE1VXWQvM1aidKMJ1GYVnkFD06BPgd1abL4Fu8ccnXLRpoM2u1FZ2cyaah4GkFZKovNNU6NcnaZP0suuzf5RnhOLe1BAVeBLZuOBNhCGDbcuhlMTjBTm9y1Tjkpz3Sd1hGp7h5iXTX55uRkiePAPLTtbfVLhaQlrEb6UvyIdmXQtizq+FoLM6v1wJfY8Jbe5bbblETk+4eeAg6MHgLivEWzcwYCyQnGhVQeD2KBYUYWI0
