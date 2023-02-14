@@ -1,5 +1,6 @@
+version: '3.8'
 services:
- mydb:
+ myappli:
   image: pmurali831/myapplication:2.0
   ports:
    - 5050:8080
