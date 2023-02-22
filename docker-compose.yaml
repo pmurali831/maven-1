@@ -4,7 +4,5 @@ services:
   image: pmurali831/myapplication:2.0
   ports:
    - 5050:8080
-  networks:
-   - abc
-networks:
-   abc: {} 
+ volumes:
+   mydb:/var/lib/
